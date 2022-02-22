@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# select all entries having enabled attribute set to true:
+# The trick is to convert the object into an array, apply the selection to the array elements and then convert it back into an object. 
+# The filter with_entries does these conversions under the hood. It is a shorthand for to_entries | map(foo) | from_entries (see jq manual).
+
+INPUT='
+{
+  "entries": {
+    "entry1": {
+      "enabled": true
+    },
+    "entry2": {
+      "enabled": false
+    },
+    "entry3": {
+      "dummy": "TEST"
+    }
+  }
+}
+'
+
+yq '.entries | with_entries(select(.value.enabled == true))' <<< "$INPUT"
