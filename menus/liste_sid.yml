@@ -1,0 +1,43 @@
+menus:
+
+   - item:        0
+     application: ASM
+     database:    ASM
+     thread:      1
+     sid:         +ASM1
+     type:        grid
+     home:        /u01
+     system:      whatever
+     listener:    LISTENER
+     comments:    comments
+     pdb:         PDB1
+     psystem:     whatever
+     oracle_home:
+
+   - item:        1
+     application: APP1
+     database:    CDB1
+     thread:      1
+     sid:         CDB11
+     type:        db
+     home:        /u01
+     system:      whatever
+     listener:    LISTENER
+     comments:    comments
+     pdb:         PDB1
+     psystem:     whatever
+     oracle_home:
+
+   - item:        2
+     application: APP2
+     database:    CDB2
+     thread:      1
+     sid:         CDB21
+     type:        db
+     home:        /u01
+     system:      whatever
+     listener:    LISTENER
+     comments:    comments
+     pdb:         PDB3
+     psystem:     whatever
+     oracle_home:
