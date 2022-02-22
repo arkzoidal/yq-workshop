@@ -1,0 +1,10 @@
+#!/bin/bash
+
+INPUT='
+animals:
+  - name : cat
+  - name : dog
+  - name : rat
+'
+
+yq '.animals[].name =="cat"' <<< "$INPUT"
